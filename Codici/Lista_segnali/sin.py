@@ -1,4 +1,4 @@
-#%%
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -25,5 +25,3 @@ plt.grid(True)
 plt.legend()
 
 plt.show()
-
-# %%

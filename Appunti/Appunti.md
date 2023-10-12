@@ -15,8 +15,7 @@ header-includes:
 ---
 \newpage
 
-
-# Chapeter 2
+# Chapter 2
 
 ### Sine-cosine functions
 
@@ -65,7 +64,8 @@ duration = 3.0   # Duration for plotting
 t = np.linspace(center - duration / 2, center + duration / 2, num=1000)
 
 # Create the tent function
-tent_function = np.piecewise(t, [t < center - width / 2, (center - width / 2 <= t) & (t <= center + width / 2), t > center + width / 2],
+tent_function = np.piecewise(t, [t < center - width / 2, (center - width / 2 <= t) &
+                             (t <= center + width / 2), t > center + width / 2],
                             [0, lambda t: amplitude * (1 - abs((t - center) / (width / 2))), 0])
 
 # Plot the tent function
@@ -97,7 +97,7 @@ Questa formula rappresenta la media nel dominio del tempo di una funzione \(s(t)
 Certamente! Ecco un esercizio che utilizza la formula della media nel dominio del tempo (time average) per calcolare il valore medio di un segnale su un intervallo di tempo specifico.
 
 **Esercizio:**
-Calcola il valore medio nel dominio del tempo del segnale \(x(t) = 2t^2 - 3t + 1\) nell'intervallo \(1 \leq t \leq 3\).
+Calcola il valore medio nel dominio del tempo del segnale $$x(t) = 2t^2 - 3t + 1$$ nell'intervallo $$1 \leq t \leq 3$$
 
 **Soluzione:**
 La formula per calcolare il valore medio nel dominio del tempo è:
@@ -171,7 +171,7 @@ $$
 \bar{x}(t) = \frac{7}{2}
 $$
 
-Quindi, il valore medio nel dominio del tempo del segnale \(x(t) = 2t^2 - 3t + 1\) nell'intervallo \(1 \leq t \leq 3\) è \(\frac{7}{2}\).
+Quindi, il valore medio nel dominio del tempo del segnale $$x(t) = 2t^2 - 3t + 1$$ nell'intervallo $$1 \leq t \leq 3$$ è $$\frac{7}{2}$$
 
 ## Energia segnali
 
@@ -188,7 +188,7 @@ Questa formula rappresenta l'energia totale del segnale \(s(t)\) calcolata come 
 Certamente! Ecco un esercizio che utilizza la formula per calcolare l'energia di un segnale.
 
 **Esercizio:**
-Calcola l'energia del segnale \(s(t) = 4\cos^2(2\pi t)\) nell'intervallo \(0 \leq t \leq 1\).
+Calcola l'energia del segnale $$s(t) = 4\cos^2(2\pi t)$$ nell'intervallo $$0 \leq t \leq 1$$.
 
 **Soluzione:**
 La formula per calcolare l'energia di un segnale \(s(t)\) nel dominio del tempo è:
@@ -197,7 +197,7 @@ $$
 E_s = \int_{-\infty}^{\infty} |s(t)|^2 \, dt
 $$
 
-Nel nostro caso, \(s(t) = 4\cos^2(2\pi t)\) e vogliamo calcolare l'energia nell'intervallo \(0 \leq t \leq 1\), quindi possiamo scrivere:
+Nel nostro caso, $$s(t) = 4\cos^2(2\pi t)$$ e vogliamo calcolare l'energia nell'intervallo $$0 \leq t \leq 1$$, quindi possiamo scrivere:
 
 $$
 E_s = \int_{0}^{1} |4\cos^2(2\pi t)|^2 \, dt
@@ -209,7 +209,9 @@ $$
 E_s = \int_{0}^{1} 16\cos^4(2\pi t) \, dt
 $$
 
-Per risolvere questo integrale, possiamo utilizzare l'identità trigonometrica \(\cos^2(x) = \frac{1 + \cos(2x)}{2}\). Applicando questa identità, otteniamo:
+Per risolvere questo integrale, possiamo utilizzare l'identità trigonometrica
+$$\cos^2(x) = \frac{1 + \cos(2x)}{2}$$
+ Applicando questa identità, otteniamo:
 
 $$
 E_s = \int_{0}^{1} 16\left(\frac{1 + \cos(4\pi t)}{2}\right)^2 \, dt
@@ -245,13 +247,13 @@ $$
 E_s = \left(4 + \frac{2}{\pi}\sin(4\pi) + \frac{1}{2}\left(\frac{1}{2} + \frac{\sin(8\pi)}{8\pi}\right)\right) - \left(0 + \frac{2}{\pi}\sin(0) + \frac{1}{2}\left(0 + \frac{\sin(0)}{8\pi}\right)\right)
 $$
 
-Notiamo che \(\sin(4\pi) = 0\) e \(\sin(8\pi) = 0\), quindi questi termini diventano zero:
+Notiamo che $$\sin(4\pi) = 0$$ e $$\sin(8\pi) = 0$$, quindi questi termini diventano zero:
 
 $$
 E_s = \left(4 + \frac{1}{4\pi}\right) - \left(0 + 0\right) = 4 + \frac{1}{4\pi}
 $$
 
-<!-- Quindi, l'energia del segnale \(s(t) = 4\cos^2(2\pi t)\) nell'intervallo \(0 \leq t \leq 1\) è \(4 + \frac{1}{4\pi}\). -->
+Quindi, l'energia del segnale $$s(t) = 4\cos^2(2\pi t)$$ nell'intervallo $$0 \leq t \leq 1$$ è $$4 + \frac{1}{4\pi}$$.
 
 ## Potenza dei segnali
 
@@ -268,7 +270,7 @@ Questa formula rappresenta la potenza media del segnale \(s(t)\) calcolata come 
 Ecco un esercizio che utilizza la formula per calcolare la potenza di un segnale.
 
 **Esercizio:**
-Calcola la potenza del segnale \(x(t) = 3\sin^2(4\pi t) + 2\cos^2(6\pi t)\) nell'intervallo \(0 \leq t \leq 1\).
+Calcola la potenza del segnale $$x(t) = 3\sin^2(4\pi t) + 2\cos^2(6\pi t)$$ nell'intervallo $$0 \leq t \leq 1$$.
 
 **Soluzione:**
 La formula per calcolare la potenza di un segnale \(x(t)\) nel dominio del tempo è:
@@ -277,7 +279,7 @@ $$
 P_x = \lim_{{T \to \infty}} \frac{1}{2T} \int_{-T}^{T} |x(t)|^2 \, dt
 $$
 
-Nel nostro caso, \(x(t) = 3\sin^2(4\pi t) + 2\cos^2(6\pi t)\) e vogliamo calcolare la potenza nell'intervallo \(0 \leq t \leq 1\), quindi possiamo scrivere:
+Nel nostro caso, $$x(t) = 3\sin^2(4\pi t) + 2\cos^2(6\pi t)$$ e vogliamo calcolare la potenza nell'intervallo $$0 \leq t \leq 1$$, quindi possiamo scrivere:
 
 $$
 P_x = \lim_{{T \to \infty}} \frac{1}{2T} \int_{0}^{1} |3\sin^2(4\pi t) + 2\cos^2(6\pi t)|^2 \, dt
@@ -289,7 +291,7 @@ $$
 P_x = \lim_{{T \to \infty}} \frac{1}{2T} \int_{0}^{1} |3\sin^2(4\pi t) + 2\cos^2(6\pi t)|^2 \, dt
 $$
 
-Utilizzando le identità trigonometriche \(\sin^2(x) = \frac{1 - \cos(2x)}{2}\) e \(\cos^2(x) = \frac{1 + \cos(2x)}{2}\), possiamo riscrivere il segnale come:
+Utilizzando le identità trigonometriche $$\sin^2(x) = \frac{1 - \cos(2x)}{2}$$ e $$\cos^2(x) = \frac{1 + \cos(2x)}{2}$$, possiamo riscrivere il segnale come:
 
 $$
 x(t) = \frac{3}{2}(1 - \cos(8\pi t)) + \frac{2}{2}(1 + \cos(12\pi t))
